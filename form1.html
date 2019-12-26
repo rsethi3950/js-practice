@@ -2,31 +2,31 @@
 <html>
 <head>
 	<title>submit a form using javascript</title>
-	
 </head>
 <body>
-	<form id="name-form">
+
+	<form action="message.html" id="name-form" >
 		<p>
-			<label>Your full name</label>:<br>
-		    <input type="text" name="fullName">
+			<label>Username</label>:<br>
+		    <input type="text" name="uname" id="name" onkeypress='return((event.charCode>=65 && event.charCode<=90)||(event.charCode>=97 && event.charCode<=122)||(event.charCode==8))' placeholder="John"required>
+		    <!-- 8 ascii value for backspace -->
 		</p>
 		<p>
 			<label>Email:</label>
-			<input type="email" name="email">
+			<input type="email" id="mail" name="email" placeholder="xyz@gmail.com"required>
 			<label>Password:</label>
-			<input type="password" name="password" required title="password must be between 5 to 10 characters">
+			<input type="password" id="pass" name="password" required title="password must be atleast 8 characters">
 		</p>
 		<p>
 			<label>Mobile:</label><br>
-			<input type="number" name="number">
+			<input type="number" id="contact" name="number"required>
 		</p>
-	<p>I agree to terms and conditions
-     <input type="checkbox">
-    </p>
-    <input type="submit" value="Submit">
+	    <p>I agree to terms and conditions
+          <input type="checkbox"required>
+        </p>
+        <input type="submit" value="Submit">
 	</form>
-   
-<p id ="result"></p>
-<script type="text/javascript" src="form1.js"></script>
+     <script type="text/javascript" src="form1.js"></script>
+     <p id ="result"></p>
 </body>
 </html>
