@@ -20,5 +20,6 @@ form.onsubmit = function(e){
     	console.log(form.number.value);
     }
 	form.reset();
+	window.open("message.html");
 }
 
